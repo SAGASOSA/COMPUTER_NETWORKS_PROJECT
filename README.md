@@ -1,94 +1,147 @@
-# 🚀 Network Addressing & Subnet Calculator
+# PROJECT_25 Documentation Files
 
-A multi-page web application built with Streamlit designed as a practical utility for network engineering students and professionals. This tool performs essential IPv4 calculations, including subnetting, address analysis, and subnet visualization.
-
-This project directly aligns with core Computer Networks syllabus topics, such as IPv4 addressing, classful addressing, subnetting, and CIDR.
+Below are the generated files as requested. You can copy each section into its respective file inside your project directory.
 
 ---
 
-## 🔧 Features
+## 📄 **README.md (Main Project Root)**
 
-This application is structured as a multi-page app with the following tools:
+```md
+# PROJECT_25 – Network Utilities Toolkit
 
-### 1. Subnet Calculator (Main Page)
-The primary tool for analyzing a network. The user provides an IP address in CIDR notation (e.g., `192.168.1.10/24`), and the app instantly calculates:
+This project is a Streamlit-based toolkit containing multiple network-related utilities such as:
 
-* **Network Address:** The first address in the network.
-* **Broadcast Address:** The last address in the network.
-* **Subnet Mask:** The dotted-decimal notation of the mask.
-* **Host Range:** The first and last usable IP addresses for hosts.
-* **Total Number of Hosts:** The count of usable IP addresses.
-* **Address Type:** Identifies if the IP is Private, Public, Loopback, etc.
+- Subnet Calculator
+- Address Class Analyzer
+- Subnetting Visualizer
+- Port Scanner
 
-### 2. Address Class Analyzer
-A simple utility to demonstrate the concept of "Classful" addressing. The user enters a single IP, and the app identifies:
+The application is built using Python and Streamlit and provides an interactive GUI for all tools.
 
-* Its traditional class (e.g., Class A, B, or C).
-* Its default (classful) subnet mask.
+## 📁 Project Structure
 
-### 3. Subnetting Visualizer
-An interactive tool to plan and visualize subnetting. The user:
-1.  Enters a large parent network (e.g., `10.0.0.0/8`).
-2.  Uses a slider to select a new, smaller subnet prefix (e.g., `/16`).
-3.  The app generates and displays a table of all the resulting subnets, showing the network address, host range, and broadcast address for each.
+```
 
----
+PROJECT_25/ │ ├── README.md ├── requirements.txt │ ├── 1_Home.py │ ├── videos/ │   └── (Add your tutorial/demo videos here) │ └── pages/ ├── 1_Subnet_Calculator.py ├── 2_Address_Class_Analyzer.py ├── 3_Subnetting_Visualizer.py └── 4_Port_Scanner.py
 
-## 💻 Tech Stack
+```
 
-* **Framework:** [Streamlit](https://streamlit.io/)
-* **Language:** [Python 3](https://www.python.org/)
-* **Core Network Library:** Python's built-in `ipaddress` module.
+## 📦 Install Dependencies
 
----
+Create a **requirements.txt** file with the following content:
+```
 
-## 🚀 How to Run Locally
+streamlit
+pandas
 
-### Prerequisites
-* Python 3.7 or newer
-* `pip` (Python package installer)
+````
 
-### 1. Clone the Repository (or Create Files)
-If this is a git repository, clone it:
+Then install the dependencies:
 ```bash
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
+pip install -r requirements.txt
+````
 
+*(Note: pandas is used for `st.dataframe` in the Subnetting Visualizer.)*
 
-# Windows
-python -m venv venv
-.\venv\Scripts\activate
+---
 
-# macOS / Linux
-python3 -m venv venv
-source venv/bin/activate
+## 🚀 Run the Project
 
-install the dependencies:
+1. Install dependencies:
 
-Bash
+```
 
 pip install -r requirements.txt
-(Note: pandas is used for st.dataframe in the Subnetting Visualizer).
 
-4. Run the App
-Assuming your main script is named 1_Subnet_Calculator.py:
+```
 
-Bash
+2. Run Streamlit:
 
-streamlit run 1_Subnet_Calculator.py
+```
+
+streamlit run 1_Home.py
+
+```
+
+3. Navigate between tools using the sidebar.
+
+---
+
+## 🛠 Features
+
+### 1. Subnet Calculator
+
+* Calculate network address, broadcast address, number of hosts, wildcard mask, etc.
+
+### 2. Address Class Analyzer
+
+* Determines IP class (A/B/C/D/E), default mask, valid ranges.
+
+### 3. Subnetting Visualizer
+
+* Explains subnetting steps with diagrams.
+
+### 4. Port Scanner
+
+* Scans specified ports on a target host.
+
+---
+
+## 📁 videos/
+
+Use this folder to store:
+
+* Demo videos
+* Tutorials
+* Explanatory animations
+
+---
+
+## 👍 Author
+
+Created by **Samyak Kamble** for CN Lab Project (2025–26).
+
+````
+
+---
+
+## 📄 **requirements.txt**
+
+```txt
+streamlit
+pandas
+numpy
+python-dotenv
+requests
+python-nmap
+ipaddress
+````
+
+---
+
+## 📄 **pages/README.md (Optional – Inside pages folder)**
+
+```md
+# Pages Module – Overview
+
+This folder contains individual Streamlit pages used in the PROJECT_25 application.
+
+## Files
+
+### 1️⃣ 1_Subnet_Calculator.py
+Provides IP subnet calculations.
+
+### 2️⃣ 2_Address_Class_Analyzer.py
+Analyzes IP class and properties.
+
+### 3️⃣ 3_Subnetting_Visualizer.py
+Explains subnetting with visuals.
+
+### 4️⃣ 4_Port_Scanner.py
+Scans ports on a given IP.
+
+Each page is automatically loaded by Streamlit when placed in the **pages/** directory.
+```
 
 
-PROJECT_25/
-│
-├── 1_Home.py
-├── README.md               <-- Your overall project README
-├── requirements.txt        <-- Your project dependencies
-│
-├── pages/
-│   ├── 1_Subnet_Calculator.py
-│   ├── 2_Address_Class_Analyzer.py
-│   ├── 3_Subnetting_Visualizer.py
-│   └── 4_Port_Scanner.py       <-- (Added .py extension)
-│
-└── videos/                 <-- Your new videos folder
-    └── (Your video files will go here)
+PROJECT_25/ │ ├── 1_Home.py ├── README.md <-- Your overall project README ├── requirements.txt <-- Your project dependencies │ ├── pages/ │ ├── 1_Subnet_Calculator.py │ ├── 2_Address_Class_Analyzer.py │ ├── 3_Subnetting_Visualizer.py │ └── 4_Port_Scanner.py <-- (Added .py extension) │ └── videos/ <-- Your new videos folder └── (Your video files will go here)
