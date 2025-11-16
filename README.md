@@ -80,10 +80,15 @@ streamlit run 1_Subnet_Calculator.py
 
 PROJECT_25/
 │
-├── 1_Subnet_Calculator.py
+├── 1_Home.py
+├── README.md               <-- Your overall project README
+├── requirements.txt        <-- Your project dependencies
 │
-└── pages/
-    │
-    ├── 2_Address_Class_Analyzer.py
-    │
-    └── 3_Subnetting_Visualizer.py   <-- (This is the new file)
+├── pages/
+│   ├── 1_Subnet_Calculator.py
+│   ├── 2_Address_Class_Analyzer.py
+│   ├── 3_Subnetting_Visualizer.py
+│   └── 4_Port_Scanner.py       <-- (Added .py extension)
+│
+└── videos/                 <-- Your new videos folder
+    └── (Your video files will go here)
